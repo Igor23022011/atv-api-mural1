@@ -1,0 +1,60 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #faf5f5;
+  color: #333;
+  margin: 0;
+}
+
+header, main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+button {
+  background: #7a4a55;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 320px;
+  margin: 8px 0;
+}
+button:focus-visible, input:focus-visible {
+  outline: 3px solid #d9a7b3;
+  outline-offset: 2px;
+}
+
+.carregando { color: #555; font-style: italic; }
+.erro { color: #a02020; font-weight: bold; }
+
+#lista-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.cartao {
+  background: #fff;
+  border: 1px solid #e6d5d8;
+  border-radius: 12px;
+  padding: 16px;
+}
+.cartao small { color: #888; text-transform: uppercase; }
+.cartao h2 { font-size: 1.1rem; margin: 8px 0; }
+.cartao p { margin: 0; line-height: 1.5; }
+
+@media (max-width: 480px) {
+  input { max-width: 100%; }
+}
